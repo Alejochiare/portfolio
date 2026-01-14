@@ -651,3 +651,142 @@ footer{
 @media (prefers-reduced-motion: reduce){
   *{scroll-behavior:auto!important;transition:none!important;}
 }
+/* ==========================
+   MOBILE / RESPONSIVE
+   ========================== */
+@media (max-width: 820px){
+
+  /* layout general */
+  .wrap{ padding: 18px 14px; }
+  .topbar .inner{ padding: 10px 12px; }
+
+  /* topbar: que no explote en 3 botones */
+  .topbar .actions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+  /* el mail ocupa toda la fila abajo (más prolijo) */
+  #btnMail{ grid-column: 1 / -1; }
+
+  /* hero */
+  .heroGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .heroLeft h1{
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .heroCtas{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .heroStats{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* tarjeta sobre mi */
+  .meCard{
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 12px;
+    align-items: center;
+  }
+  .avatar{ width:72px; height:72px; }
+
+  /* ===== PROYECTOS ===== */
+
+  /* stage y rail */
+  .stage{ padding: 0; }
+  .stageTop{ padding: 0 2px 10px; }
+  .rail{ scroll-snap-type: x mandatory; }
+
+  .slide{
+    scroll-snap-align: start;
+    padding: 0;
+  }
+
+  /* en celu: video/imagen ARRIBA y texto ABAJO */
+  .stageBody{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pLeft{ order: 2; }
+  .pRight{ order: 1; }
+
+  .pTitle{
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .pDesc{
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .actionsRow{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .infoGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* “device” (media) con altura linda en celu */
+  .device{
+    width: 100%;
+    border-radius: 16px;
+  }
+  .mediaWrap{
+    border-radius: 16px;
+  }
+  /* si tu device usa aspect ratio por CSS variable */
+  .device[data-media="1"]{
+    --ar: 16/10; /* más alto para celu */
+  }
+
+  /* botones prev/next más grandes en touch */
+  .iconBtn{
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+  /* contacto */
+  .fieldRow{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .contactActions{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* modal */
+  .modal{
+    width: min(560px, 92vw);
+  }
+}
+
+/* extra: celu chico */
+@media (max-width: 420px){
+  .heroLeft h1{ font-size: 26px; }
+  .heroStats{ grid-template-columns: 1fr; }
+}
+
