@@ -100,23 +100,8 @@ const PROJECTS = [
     tags: ["Campo", "Lotes", "Control"],
     cover: "",
     video: ""
-  },
-  {
-    key: "proyecto_7",
-    title: "Proyecto 7 (completar)",
-    status: "Privado",
-    desc: "Descripción breve del proyecto (completar).",
-    goal: "Objetivo (completar).",
-    impact: "Aporte (completar).",
-    tech: "Tecnologías (completar).",
-    result: "Resultado (completar).",
-    link: "",
-    client: { url: "" },
-    tags: ["CRM", "Procesos", "Interno"],
-    cover: "assets/placeholder.jpg",
-    video: ""
   }
-];
+  ];
 
 // ==========================
 // HELPERS
@@ -575,3 +560,4 @@ ${msg || "Quería consultarte por un proyecto."}`;
     alert("No se pudo copiar. Copialo manualmente.");
   }
 });
+
